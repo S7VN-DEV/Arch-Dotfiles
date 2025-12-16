@@ -1,0 +1,47 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+#waybar {
+  color: @foreground;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#workspaces button {
+  color: @foreground;
+  padding-right: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  min-width: 50px;
+  padding-right: 10px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+  color: @foreground-inactive;
+}
+
+#clock,
+#custom-coreproc,
+#custom-memdisk,
+#temperature {
+  padding-left: 1em
+}
+
+#network,
+#wireplumber,
+#backlight,
+#battery,
+#tray {
+  padding-right: 1em
+}

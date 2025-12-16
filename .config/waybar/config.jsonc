@@ -1,0 +1,125 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "spacing": 5,
+  "modules-left": [
+    "clock",
+    "group/hardware",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "network",
+    "wireplumber",
+    "backlight",
+    "battery",
+    "power"
+  ],
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": false,
+    "disable-scroll": false,
+    "on-click": "activate",
+    "icon-size": 10,
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format": "<span size='larger'>{icon}</span>",
+    "format-icons": {
+      "active": "\uf444",
+      "default": "\uf4c3"
+    },
+    "sort-by-number": true
+  },
+  "clock": {
+    "format": "{:%H:%M / %a.%d //}"
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "{volume}% \ueee8",
+    "format-icons": [
+      "\uf026",
+      "\uf027",
+      "\uf028"
+    ],
+    "max-volume": 150,
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "\uf244",
+      "\uf243",
+      "\uf242",
+      "\uf241",
+      "\uf240"
+    ]
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "\udb80\udcde",
+      "\udb80\udcdd",
+      "\udb80\udcdf",
+      "\udb80\udcde"
+    ]
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/coreproc",
+      "custom/memdisk"
+    ]
+  },
+  "custom/coreproc": {
+    "exec": "$HOME/.config/waybar/coreproc.sh",
+    "interval": 10,
+    "return-type": "json"
+  },
+  "custom/memdisk": {
+    "exec": "$HOME/.config/waybar/memdsk.sh",
+    "interval": 15,
+    "return-type": "json"
+  },
+  "temperature": {
+    "format": " {temperatureC}C"
+  },
+  "network": {
+    "format": "",
+    "interval": 5,
+    "format-ethernet": "{essid} \udb83\udc9d",
+    "format-wifi": "{signalStrength}% {icon}",
+    "format-disconnected": "\udb83\udc9c",
+    "format-icons": [
+      "\udb82\udd2f",
+      "\udb82\udd1f",
+      "\udb82\udd22",
+      "\udb82\udd25",
+      "\udb82\udd28"
+    ],
+    "tooltip-format-wifi": "SSID:  {essid} {frequency}GHz \nIP:    {ipaddr}/{cidr}\nSpeed: \uf062 {bandwidthDownBits} \uf063 {bandwidthUpBits}",
+    "tooltip-format-ethernet": "SSID:  {ifname} {frequency}GHz \nIP:    {ipaddr}/{cidr}\nSpeed: \uf062 {bandwidthDownBits} \uf063 {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "nm-connection-editor"
+  },
+  "bluetooth": {
+    "format": "\udb80\udcaf",
+    "format-disabled": "\udb80\udcb2",
+    "format-connected": "\udb80\udcb1",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 12
+  }
+}
