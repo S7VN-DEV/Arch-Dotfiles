@@ -18,20 +18,34 @@
 }
 
 #workspaces button {
-  color: @surface_tint;
+  color: @primary;
   padding-right: 6px;
+  border-radius: 14px;
   transition: all 0.3s ease-in-out;
 }
 
+#workspaces button:hover {
+  border-radius: 14px;
+  background-color: @surface_container_high
+}
+
 #workspaces button.active {
+  color: @surface_container;
+  background: @primary;
   min-width: 50px;
-  padding-right: 10px;
+  padding-right: 8px;
   background-size: 400% 400%;
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.empty {
+workspaces button.empty {
   color: @surface_dim;
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @surface_container;
+  border-radius: 14px
 }
 
 #clock,

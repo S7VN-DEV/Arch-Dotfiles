@@ -86,7 +86,7 @@ alias spex='pkexec env $(env | grep -v -e "^HYPRLAND_CMD=" -e "^NIX_PROFILES=" -
 alias j='java'
 alias jc='javac'
 alias p='python'
-alias hyprc='shx ~/.config/hypr'
+alias hyprc='hx ~/.config/hypr'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Editor
