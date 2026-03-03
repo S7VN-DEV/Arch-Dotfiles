@@ -1,8 +1,8 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
-    "type": "auto",
-    "source": "",
+    "type": "kitty-icat",
+    "source": "~/.config/fastfetch/imgs/reze-rain.gif",
     "color": {
       "1": "",
       "2": "",
@@ -14,12 +14,12 @@
       "8": "",
       "9": ""
     },
-    "width": null,
+    "width": 46,
     "height": null,
     "padding": {
       "top": 0,
       "left": 0,
-      "right": 4
+      "right": 3
     },
     "printRemaining": true,
     "preserveAspectRatio": false,
@@ -35,11 +35,11 @@
     "pipe": false,
     "showErrors": false,
     "disableLinewrap": true,
-    "hideCursor": false,
-    "separator": ": ",
+    "hideCursor": true,
+    "separator": " => ",
     "color": {
-      "keys": "",
-      "title": "",
+      "keys": "dim_default",
+      "title": "italic_default",
       "output": "",
       "separator": ""
     },
@@ -102,7 +102,7 @@
     "noBuffer": false,
     "key": {
       "width": 0,
-      "type": "string",
+      "type": "both",
       "paddingLeft": 0
     },
     "freq": {
@@ -119,6 +119,7 @@
     "dsForceDrm": false
   },
   "modules": [
+    "break",
     {
       "type": "title",
       "key": " ",
@@ -148,29 +149,29 @@
       "type": "kernel",
       "keyIcon": ""
     },
-    {
-      "type": "uptime",
-      "keyIcon": ""
-    },
-    {
-      "type": "packages",
-      "keyIcon": "󰏖",
-      "disabled": [
-        "apk"
-      ],
-      "combined": false
-    },
+    // {
+    //   "type": "uptime",
+    //   "keyIcon": ""
+    // },
+    // {
+    //   "type": "packages",
+    //   "keyIcon": "󰏖",
+    //   "disabled": [
+    //     "apk"
+    //   ],
+    //   "combined": false
+    // },
     {
       "type": "shell",
       "keyIcon": ""
     },
-    {
-      "type": "display",
-      "keyIcon": "󰍹",
-      "compactType": "none",
-      "preciseRefreshRate": false,
-      "order": null
-    },
+    // {
+    //   "type": "display",
+    //   "keyIcon": "󰍹",
+    //   "compactType": "none",
+    //   "preciseRefreshRate": false,
+    //   "order": null
+    // },
     {
       "type": "de",
       "keyIcon": "",
@@ -237,83 +238,20 @@
         "type": 0
       }
     },
-    {
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false
-    },
-    {
-      "type": "disk",
-      "keyIcon": "",
-      "showRegular": true,
-      "showExternal": true,
-      "showHidden": false,
-      "showSubvolumes": false,
-      "showReadOnly": true,
-      "showUnknown": false,
-      "folders": "",
-      "hideFolders": "/efi:/boot:/boot/*",
-      "hideFS": "",
-      "useAvailable": false,
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      }
-    },
-    {
-      "type": "localip",
-      "keyIcon": "󰩟",
-      "showIpv4": true,
-      "showIpv6": false,
-      "showMac": false,
-      "showLoop": false,
-      "showPrefixLen": true,
-      "showMtu": false,
-      "showSpeed": false,
-      "showFlags": false,
-      "compact": false,
-      "defaultRouteOnly": true,
-      "showAllIps": false,
-      "namePrefix": ""
-    },
-    {
-      "type": "battery",
-      "keyIcon": "",
-      "temp": false,
-      "percent": {
-        "green": 50,
-        "yellow": 20,
-        "type": 0
-      }
-    },
-    {
-      "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },
-    {
-      "type": "locale",
-      "keyIcon": ""
-    },
-    "break",
-    {
-      "type": "colors",
-      "key": " ",
-      "keyIcon": "",
-      "symbol": "block",
-      "paddingLeft": 0,
-      "block": {
-        "width": 3,
-        "range": [
-          0,
-          15
-        ]
-      }
-    }
+    "break"
+    // {
+    //   "type": "colors",
+    //   "key": " ",
+    //   "keyIcon": "",
+    //   "symbol": "block",
+    //   "paddingLeft": 0,
+    //   "block": {
+    //     "width": 3,
+    //     "range": [
+    //       0,
+    //       15
+    //     ]
+    //   }
+    // }
   ]
 }

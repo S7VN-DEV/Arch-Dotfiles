@@ -116,7 +116,8 @@
     "tooltip-format-wifi": "SSID:  {essid} {frequency}GHz \nIP:    {ipaddr}/{cidr}\nSpeed: \uf062 {bandwidthDownBits} \uf063 {bandwidthUpBits}",
     "tooltip-format-ethernet": "SSID:  {ifname} {frequency}GHz \nIP:    {ipaddr}/{cidr}\nSpeed: \uf062 {bandwidthDownBits} \uf063 {bandwidthUpBits}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor"
+    "on-click": "nmsurf",
+    "on-click-right": "nm-connection-editor"
   },
   "bluetooth": {
     "format": "\udb80\udcaf",
