@@ -9,8 +9,6 @@ window {
 #input {
   margin: 5px;
   border: none;
-  color: #f8f8f2;
-  background-color: rgba(55, 59, 65, 0.95);
 }
 
 #inner-box {
@@ -33,7 +31,6 @@ window {
 #text {
   margin: 5px;
   border: none;
-  color: #c5c8c6;
 }
 
 #entry {
@@ -45,7 +42,6 @@ window {
 }
 
 #entry:selected {
-  background-color: rgba(55, 59, 65, 0.95);
   border-radius: 5px;
   border: none;
 }

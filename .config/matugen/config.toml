@@ -4,16 +4,36 @@ caching = false
 fallback_color = "#ffbf9b"
 
 [templates.dusnt]
-input_path = '~/.config/matugen/templates/dunstrc'
-output_path = '~/.config/dunst/dunstrc'
+input_path = './templates/dunstrc'
+output_path = '../dunst/dunstrc'
 post_hook = 'dunstctl reload'
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/colors.conf'
+input_path = './templates/hyprland-colors.conf'
+output_path = '../hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/waybar/colors.css'
+input_path = './templates/colors.css'
+output_path = '../waybar/colors.css'
 post_hook = 'killall waybar && waybar &'
+
+[templates.rofi]
+input_path = './templates/rofi-colors.rasi'
+output_path = '../rofi/matugen/rofi-colors.rasi'
+
+[templates.gtk3]
+input_path = './templates/colors-gtk.css'
+output_path = '../gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = './templates/colors-gtk.css'
+output_path = '../gtk-4.0/colors.css'
+
+[templates.qtct]
+input_path = './templates/qtct-colors.conf'
+output_path = '../qt6ct/colors/matugen.conf'
+
+[templates.qt6kde]
+input_path = './templates/matugen.colors'
+output_path = '../../.local/share/color-schemes/matugen.colors'

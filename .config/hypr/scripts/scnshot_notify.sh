@@ -1,9 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
+SLURP=$(slurp -w 0) || exit 0
 TMP=$(mktemp /tmp/scnshot-XXX.png)
-grim -g "$(slurp -w 0)" - | wl-copy && wl-paste > $TMP
+grim -g "$SLURP" "$TMP" && wl-copy < "$TMP"
 
 ACTION=$(dunstify "$TMP" -i "$TMP" -a "Screenshot" -A "default,Open swappy")
-if [[ "$ACTION" == "default" ]]; then
-  swappy -f "$TMP"
-fi
+[[ "$ACTION" == "default" ]] && swappy -f "$TMP"

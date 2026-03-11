@@ -1,3 +1,4 @@
+#!/bin/bash
 # Layout switcher, need to make custom pngs for this later
 
 mkdir -p /tmp/icons
