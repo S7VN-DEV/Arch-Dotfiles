@@ -8,21 +8,96 @@
   font-family: "JetBrainsMono Nerd Font";
 }
 
-
-@define-color accent_color #b9c5f4;
-@define-color accent_fg_color #0b193e;
-@define-color accent_bg_color #b9c5f4;
-@define-color window_bg_color #131316;
-@define-color window_fg_color #e4e2e5;
-@define-color headerbar_bg_color #131316;
-@define-color headerbar_fg_color #e4e2e5;
-@define-color popover_bg_color #131316;
-@define-color popover_fg_color #e4e2e5;
-@define-color view_bg_color #131316;
-@define-color view_fg_color #e4e2e5;
-@define-color card_bg_color #131316;
-@define-color card_fg_color #e4e2e5;
+/* libawita */
+@define-color accent_color #ffb3ae;
+@define-color accent_fg_color #410005;
+@define-color accent_bg_color #ffb3ae;
+@define-color window_bg_color #1c1010;
+@define-color window_fg_color #f4dddb;
+@define-color headerbar_bg_color #1c1010;
+@define-color headerbar_fg_color #f4dddb;
+@define-color popover_bg_color #1c1010;
+@define-color popover_fg_color #f4dddb;
+@define-color view_bg_color #1c1010;
+@define-color view_fg_color #f4dddb;
+@define-color card_bg_color #1c1010;
+@define-color card_fg_color #f4dddb;
 @define-color sidebar_bg_color @window_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
 @define-color sidebar_border_color @window_bg_color;
 @define-color sidebar_backdrop_color @window_bg_color;
+
+/* Breeze */
+
+/* Core colors */
+@define-color theme_fg_color_breeze #f4dddb;
+@define-color theme_text_color_breeze #f4dddb;
+@define-color theme_bg_color_breeze #1c1010;
+@define-color theme_base_color_breeze #1c1010;
+
+/* Selection / accent */
+@define-color theme_view_hover_decoration_color_breeze #ffb3ae;
+@define-color theme_hovering_selected_bg_color_breeze #ffb3ae;
+@define-color theme_selected_bg_color_breeze #ffb3ae;
+@define-color theme_selected_fg_color_breeze #68000c;
+@define-color theme_view_active_decoration_color_breeze #ffb3ae;
+
+/* Disabled */
+@define-color insensitive_selected_bg_color_breeze rgba(255, 179, 174, 0.35);
+@define-color insensitive_bg_color_breeze #584140;
+@define-color insensitive_fg_color_breeze rgba(244, 221, 219, 0.35);
+@define-color insensitive_base_color_breeze rgba(244, 221, 219, 0.35);
+@define-color insensitive_base_fg_color_breeze #1c1010;
+@define-color insensitive_selected_fg_color_breeze #1c1010;
+
+/* Unfocused */
+@define-color theme_unfocused_fg_color_breeze #f4dddb;
+@define-color theme_unfocused_text_color_breeze #f4dddb;
+@define-color theme_unfocused_bg_color_breeze #1c1010;
+@define-color theme_unfocused_base_color_breeze #1c1010;
+@define-color theme_unfocused_selected_bg_color_alt_breeze #ffb3ae;
+@define-color theme_unfocused_selected_bg_color_breeze rgba(255, 179, 174, 0.5);
+@define-color theme_unfocused_selected_fg_color_breeze #68000c;
+
+/* Borders */
+@define-color borders_breeze #584140;
+@define-color unfocused_borders_breeze #584140;
+@define-color insensitive_borders_breeze rgba(88, 65, 64, 0.35);
+@define-color unfocused_insensitive_borders_breeze rgba(88, 65, 64, 0.35);
+
+/* Buttons */
+@define-color theme_button_background_normal_breeze #1c1010;
+@define-color theme_button_decoration_hover_breeze #ffb3ae;
+@define-color theme_button_decoration_focus_breeze #ffb3ae;
+@define-color theme_button_foreground_normal_breeze #f4dddb;
+@define-color theme_button_foreground_active_breeze #68000c;
+@define-color theme_button_background_insensitive_breeze #584140;
+@define-color theme_button_decoration_hover_insensitive_breeze rgba(255, 179, 174, 0.35);
+@define-color theme_button_decoration_focus_insensitive_breeze rgba(255, 179, 174, 0.35);
+@define-color theme_button_foreground_insensitive_breeze rgba(223, 191, 189, 0.35);
+@define-color theme_button_foreground_active_insensitive_breeze #1c1010;
+
+/* Semantic colors */
+@define-color warning_color_breeze #81d5cb;
+@define-color error_color_breeze #ffb4ab;
+@define-color success_color_breeze #ffb3ae;
+
+/* Links */
+@define-color link_color_breeze #ffb3ae;
+@define-color link_visited_color_breeze #81d5cb;
+
+/* Titlebar */
+@define-color theme_titlebar_background_breeze #1c1010;
+@define-color theme_titlebar_foreground_breeze #f4dddb;
+@define-color theme_titlebar_background_light_breeze #1c1010;
+@define-color theme_titlebar_foreground_backdrop_breeze #dfbfbd;
+@define-color theme_titlebar_background_backdrop_breeze #1c1010;
+
+/* Tooltip */
+@define-color tooltip_text_breeze #f4dddb;
+@define-color tooltip_background_breeze #291d1c;
+@define-color tooltip_border_breeze #584140;
+
+/* Content */
+@define-color content_view_bg_breeze #1c1010;
+@define-color text_view_bg @content_view_bg_breeze;

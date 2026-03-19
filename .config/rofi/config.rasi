@@ -1,0 +1,158 @@
+@import "./matugen/rofi-colors.rasi"
+
+* {
+    background-alt:              @on-secondary;
+    selected:                    @primary;
+    active:                      @background;
+    urgent:                      @error;
+
+    text-selected:               @surface;
+    text-color:                  @secondary;
+    border-color:                @primary;
+}
+
+configuration {
+	font: "JetBrainsMono Nerd Font semibold 14";
+	icon-theme: "Papirus-Dark";
+	display-drun: "  Apps";
+    display-dmenu: "  ";
+
+    sorting-method: "fzf";
+    sort: true;
+}
+
+element {
+    children: [ element-icon, element-text ];
+}
+element-text {
+	font: "JetBrainsMono Nerd Font semibold 14";
+}
+
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @text-color;
+}
+element-text selected,
+element normal.active {
+    background-color:            @selected;
+    text-color:                  @active;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @text-selected;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @text-selected;
+}
+element selected.active {
+    background-color:            @urgent;
+    text-color:                  @text-selected;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element alternate.urgent {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element alternate.active {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+
+window {
+    padding:          5;
+	width:            700px;
+    background-color: @background-alt;
+    border:           1;
+}
+mainbox {
+	enabled:                     true;
+    orientation:                 vertical;
+    background-color:            @background-alt;
+}
+message {
+    padding:      1px ;
+    border-color: @background-alt;
+    border:       2px dash 0px 0px ;
+}
+textbox {
+    background-color: @active;
+    text-color: @text-color;
+}
+listview {
+    padding:      2px 4px 0px ;
+    scrollbar:    false;
+    border-color: @background-alt;
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+	lines:        12;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: @active;
+}
+sidebar {
+   	border-color: @background-alt;
+   	border:       2px dash 0px 0px ;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: inherit;
+}
+button selected {
+    background-color: @selected;
+    text-color:       @text-selected;
+}
+num-filtered-rows {
+    expand:     false;
+    text-color: Gray;
+}
+num-rows {
+    expand:     false;
+    text-color: Gray;
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: Gray;
+}
+inputbar {
+    padding:          1px ;
+    spacing:          0px ;
+	background-color: transparent;
+    children:         [ "prompt","textbox-prompt-colon","entry","overlay","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+}
+entry {
+	background-color:  @background-alt;
+    text-color:        @text-color;
+	cursor:            text;
+    spacing:           0;
+    placeholder:                 "";
+    placeholder-color:           inherit;
+}
+prompt {
+    spacing:    0;
+    text-color: @text-color;
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: @text-color;
+}

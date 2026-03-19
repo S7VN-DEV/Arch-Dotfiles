@@ -37,3 +37,8 @@ output_path = '../qt6ct/colors/matugen.conf'
 [templates.qt6kde]
 input_path = './templates/matugen.colors'
 output_path = '../../.local/share/color-schemes/matugen.colors'
+
+[templates.pywalfox]
+input_path  = './templates/pywalfox-colors.json'
+output_path = '../../.cache/wal/colors.json'
+post_hook = 'pywalfox update'
