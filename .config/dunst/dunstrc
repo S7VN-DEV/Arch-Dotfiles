@@ -16,8 +16,8 @@
     corner_radius = 4
     progress_bar_corner_radius = 2
 
-    frame_color = "#ffb3ae"
-    highlight = "#ffb3ae"
+    frame_color = "#ffb4aa"
+    highlight = "#ffb4aa"
 
     ### Text ###
     
@@ -39,15 +39,15 @@
 
 [urgency_low]
     timeout = 2
-    background = "#1c1010"
-    foreground = "#f4dddb"
-    highlight = "#b03838"
+    background = "#1e0f0d"
+    foreground = "#fadcd7"
+    highlight = "#c8251e"
 
 [urgency_normal]
     timeout = 5
-    background = "#1c1010"
-    foreground = "#f4dddb"
-    highlight = "#b03838"
+    background = "#1e0f0d"
+    foreground = "#fadcd7"
+    highlight = "#c8251e"
 
 [urgency_critical]
     timeout = 0

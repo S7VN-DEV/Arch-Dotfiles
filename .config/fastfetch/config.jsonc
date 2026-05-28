@@ -14,12 +14,12 @@
       "8": "",
       "9": ""
     },
-    "width": 46,
+    "width": null,
     "height": null,
     "padding": {
-      "top": 0,
+      "top": 1,
       "left": 0,
-      "right": 3
+      "right": 1
     },
     "printRemaining": true,
     "preserveAspectRatio": false,
@@ -34,7 +34,7 @@
     "stat": false,
     "pipe": false,
     "showErrors": false,
-    "disableLinewrap": true,
+    "disableLinewrap": false,
     "hideCursor": true,
     "separator": " => ",
     "color": {
@@ -149,18 +149,18 @@
       "type": "kernel",
       "keyIcon": ""
     },
-    // {
-    //   "type": "uptime",
-    //   "keyIcon": ""
-    // },
-    // {
-    //   "type": "packages",
-    //   "keyIcon": "󰏖",
-    //   "disabled": [
-    //     "apk"
-    //   ],
-    //   "combined": false
-    // },
+    {
+      "type": "uptime",
+      "keyIcon": ""
+    },
+    {
+      "type": "packages",
+      "keyIcon": "󰏖",
+      "disabled": [
+        "apk"
+      ],
+      "combined": false
+    },
     {
       "type": "shell",
       "keyIcon": ""
@@ -206,10 +206,10 @@
       "type": "terminal",
       "keyIcon": ""
     },
-    {
-      "type": "terminalfont",
-      "keyIcon": ""
-    },
+    // {
+    //   "type": "terminalfont",
+    //   "keyIcon": ""
+    // },
     {
       "type": "cpu",
       "keyIcon": "",
