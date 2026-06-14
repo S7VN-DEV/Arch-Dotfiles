@@ -30,16 +30,23 @@ local function update_monitors()
     hl.monitor({
         output = "desc:Samsung Electric Company Odyssey G40B HCJX701187",
         mode = "1920x1080@239.75999",
-        position = "0x0",
+        position = "-2560x0",
         scale = 1,
         vrr = 1
     })
     hl.monitor({
         output = "desc:California Institute of Technology 0x161D 0x00006001",
         mode = "2560x1600@165",
-        position = "1920x0",
+        position = "0x0",
         scale = 1.6,
-        vrr = 1
+        vrr = 1,
+        icc = os.getenv("HOME") .. "/.config/hypr/extras/rtings-icc-profile.icm"
+    })
+    hl.monitor({
+        output = "HDMI-A-1",
+        mode = "1920x1080@60Hz",
+        position = "1600x0",
+        scale = 1,
     })
     hl.monitor({
         output = "",
@@ -53,6 +60,11 @@ local function update_monitors()
     hl.workspace_rule({ workspace = "2", default_name = "Browse", monitor = V.mainMon, default = true })
     hl.workspace_rule({ workspace = "3", default_name = "Chat", monitor = V.mainMon, default = true })
     hl.workspace_rule({ workspace = "10", default_name = "PerfMon", monitor = V.lapMon, default = true })
+
+    -- Update mainMon on monitor change
+    hl.exec_cmd(
+        [[  xrandr --output ]] .. V.mainMon .. [[ --primary ]]
+    )
 end
 
 update_monitors()

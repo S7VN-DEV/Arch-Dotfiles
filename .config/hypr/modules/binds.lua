@@ -86,7 +86,7 @@ hl.bind(V.mainMod .. " + R", function()
     hl.monitor({
         output = "desc:California Institute of Technology 0x161D 0x00006001",
         mode = "2560x1600@60",
-        position = "1920x0",
+        position = "0x0",
         scale = 1.6,
         vrr = 1
     })

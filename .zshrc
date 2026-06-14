@@ -27,7 +27,7 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Lines configured by zsh-newuser-install
+# Lines configured by zsh-newuser-install and user
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
@@ -40,12 +40,14 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt correct
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/sven/.zshrc'
 
 # Autoload compleations
 autoload -U compinit && compinit
+autoload -Uz tetriscurses
 zinit cdreplay -q
 
 # Powelevel10k
@@ -89,6 +91,7 @@ alias jc='javac'
 alias p='python'
 alias hyprc='hx ~/.config/hypr'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias llmc='echo "{\"mcpServers\": {\"filesystem\": {\"command\": \"mcp-server-filesystem\", \"args\": [\"$PWD\"]}, \"web\": {\"command\": \"mcp-server-fetch\", \"args\": [\"--ignore-robots-txt\"]}, \"shell\": {\"command\": \"bunx\", \"args\": [\"@mcp-get/shell\"]}}}" > /tmp/ollmcp_temp.json && ollmcp -j /tmp/ollmcp_temp.json'
 
 # Editor
 export EDITOR="helix"

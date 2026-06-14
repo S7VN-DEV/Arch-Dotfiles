@@ -19,6 +19,6 @@ hl.config({
     use_nearest_neighbor = true,
   },
   render = {
-    direct_scanout = true
+    direct_scanout = 0
   }
 })
